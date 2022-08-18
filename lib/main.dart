@@ -1,6 +1,9 @@
 import 'package:api_uses_project/http_screen.dart';
 import 'package:flutter/material.dart';
 
+import 'api_screen.dart';
+import 'data_from_api.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -12,9 +15,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home:HttpScreen(),
+      debugShowCheckedModeBanner: false,
+      home:DataFromApi(),
     );
   }
 }
-
