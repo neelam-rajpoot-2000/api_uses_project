@@ -1,5 +1,8 @@
 import 'package:api_uses_project/http_screen.dart';
+import 'package:api_uses_project/modals/news_data.dart';
+import 'package:api_uses_project/stories.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'api_screen.dart';
 import 'data_from_api.dart';
@@ -16,7 +19,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:DataFromApi(),
+      home:ChangeNotifierProvider(
+        create: (context)=> NewsData(),
+        builder: (context,child){
+          return StoriesScreen();
+        },
+      )
     );
   }
 }

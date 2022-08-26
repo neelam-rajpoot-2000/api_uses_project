@@ -45,7 +45,6 @@ class _ApiScreenState extends State<ApiScreen> {
     }
   }
   late Future<Album> futureAlbum;
-
   @override
   void initState() {
     super.initState();
